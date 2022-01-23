@@ -36,7 +36,6 @@ m0801.addEventListener('click',()=>{
   });
 
   function create0801 () {
-    sound()
     const myMessege = input0804.value
     console.log(myMessege);
     modal__main0801.insertAdjacentHTML('beforeend',` <div class="pop__body">
@@ -57,7 +56,6 @@ m0801.addEventListener('click',()=>{
   }
   
   function create0804 () {
-    sound()
     const myMessege = input0804.value
     pf0804.style.height = "40px";
               input0804.style.height = "40px";
@@ -77,14 +75,26 @@ m0801.addEventListener('click',()=>{
                 </div>
                 <p class="time">${hour+1}:${min}</p>
               </div>`)
+             
               
   }
   
+  const f1 =(event)=>{
+    event.stopPropagation()
+    create0801()
+    create0804()
+    sound()
+    input0804.value= ""
+       send.style.display = "none";
+       pf0804.style.height = "50px";
+       input0804.style.height = "40px";
+  }
   
+  send.addEventListener('click',f1)
+  // send.addEventListener('click',(event)=>{
+  //   send.style.display = "none";
+  // })
   
-  send.addEventListener('click',create0801)
-  
-  send.addEventListener('click',create0804)
 
   const time = new Date();
 const year = time.getFullYear();
@@ -101,4 +111,3 @@ const sound = () =>{
   audio.src = "222.m4a"
   audio.play()
 }
-// send.addEventListener('click',sound())

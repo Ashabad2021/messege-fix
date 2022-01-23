@@ -2,13 +2,13 @@
   .wrapper {
     width: 360px;
     height: 640px;
-    background-color: blue;
+    /* background-color: blue; */
     /* overflow: hidden; */
   }
   .main__display {
     width: 360px;
     height: 640px;
-    background-color: #d9dfdf;
+    background-color: #a9aaac;
     overflow: hidden;
     display: block;
   }
@@ -59,7 +59,7 @@
   .modal__0801 {
     width: 360px;
     min-height: 640px;
-    background-color: rgb(22, 241, 14);
+    background-color: #a9aaac;
     display: none;
   }
   .header__block0801 {
@@ -69,6 +69,7 @@
 
   .modal__main0801{
    padding-top: 70px;
+   padding-bottom: 70px;
   }
 
 /* .pop__body {
@@ -110,8 +111,6 @@
     width: 360px;
     height: 50px;
     position: fixed;
-    left: 0;
-    bottom: 0;
     background-color: #afb8b8;
   }
   .div__message {
@@ -152,10 +151,15 @@
   }
   .modal__main0804 {
     padding-top: 70px;
+    padding-bottom: 70px;
    }
   .header__block0804 {
     position: fixed;
   }
+  .big {
+    height: 100px;
+  }
+  
 }
 
 
