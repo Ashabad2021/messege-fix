@@ -91,9 +91,7 @@ m0801.addEventListener('click',()=>{
   }
   
   send.addEventListener('click',f1)
-  // send.addEventListener('click',(event)=>{
-  //   send.style.display = "none";
-  // })
+ 
   
 
 const time = new Date();
