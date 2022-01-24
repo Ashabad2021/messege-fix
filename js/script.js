@@ -39,19 +39,19 @@ m0801.addEventListener('click',()=>{
     const myMessege = input0804.value
     console.log(myMessege);
     modal__main0801.insertAdjacentHTML('beforeend',` <div class="pop__body">
-                <h1 class="pop__date">- ${date}/${month+1}/${year} -</h1>
+                <h1 class="pop__date">- ${date}/${month}/${year} -</h1>
                 <div class="pop__block">
                   <div class="pop__avatar">
                     <img src="./img/contact.png" alt="" />
                   </div>
                   <div class="pop__info">
                     <p>
-                      ${date}/${month+1}/${year} ${hour+1}:${min}:${sec} ${myMessege} gecirelen 50.00 manat
+                      ${date}/${month}/${year} ${hour}:${min}:${sec} ${myMessege} gecirelen 50.00 manat
                       Saklanan 0.10 manat
                     </p>
                   </div>
                 </div>
-                <p class="time">${hour+1}:${min}</p>
+                <p class="time">${hour}:${min}</p>
               </div>`)
   }
   
@@ -62,7 +62,7 @@ m0801.addEventListener('click',()=>{
               send.style.display = "none";
    
               modal__main0804.insertAdjacentHTML('beforeend',` <div class="pop__body">
-                <h1 class="pop__date">- ${date}/${month+1}/${year} -</h1>
+                <h1 class="pop__date">- ${date}/${month}/${year} -</h1>
                 <div class="pop__block">
                   <div class="pop__avatar">
                     <img src="./img/contact.png" alt="" />
@@ -73,7 +73,7 @@ m0801.addEventListener('click',()=>{
                     </p>
                   </div>
                 </div>
-                <p class="time">${hour+1}:${min}</p>
+                <p class="time">${hour}:${min}</p>
               </div>`)
              
               
