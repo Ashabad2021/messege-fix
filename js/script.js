@@ -96,14 +96,22 @@ m0801.addEventListener('click',()=>{
   // })
   
 
-  const time = new Date();
+const time = new Date();
 const year = time.getFullYear();
-const month = time.getMonth();
-const date = time.getDate();
-const hour = time.getHours();
-const min = time.getMinutes();
-const sec = time.getMinutes();
-console.log(year, month + 1, date, hour, min, sec);
+const month = time.getMonth()+1 < 10 ? "0"+ (time.getMonth()+1) : time.getMonth()+1
+const date = time.getDate() < 10 ? "0" + time.getDate() : time.getDate()
+const hour = time.getHours() < 10 ? "0" + time.getHours() : time.getHours()
+const min = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()
+const sec = time.getSeconds() <10 ? "0"+ time.getSeconds() : time.getSeconds()
+
+
+console.log(year, month, date, hour, min, sec);
+
+
+
+console.log(month);
+
+
 
 
 const sound = () =>{
@@ -111,3 +119,8 @@ const sound = () =>{
   audio.src = "222.m4a"
   audio.play()
 }
+
+// const date = time.getDate();
+// const hour = time.getHours();
+// const min = time.getMinutes();
+// const sec = time.getSeconds();
