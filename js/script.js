@@ -54,7 +54,6 @@ m0801.addEventListener('click',()=>{
   }
   
   function create0804 () {
-    // const myMessege = input0804.value
     pf0804.style.height = "40px";
               input0804.style.height = "40px";
               send.style.display = "none";
