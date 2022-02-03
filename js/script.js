@@ -36,8 +36,6 @@ m0801.addEventListener('click',()=>{
   });
 
   function create0801 () {
-    const myMessege = input0804.value
-    console.log(myMessege);
     modal__main0801.insertAdjacentHTML('beforeend',` <div class="pop__body">
                 <h1 class="pop__date">- ${date}/${month}/${year} -</h1>
                 <div class="pop__block">
@@ -46,7 +44,7 @@ m0801.addEventListener('click',()=>{
                   </div>
                   <div class="pop__info">
                     <p>
-                      ${date}/${month}/${year} ${hour}:${min}:${sec} ${myMessege} gecirelen 50.00 manat
+                      ${date}/${month}/${year} ${hour}:${min}:${sec} ${nomer} gecirelen ${summa} manat
                       Saklanan 0.10 manat
                     </p>
                   </div>
@@ -56,7 +54,7 @@ m0801.addEventListener('click',()=>{
   }
   
   function create0804 () {
-    const myMessege = input0804.value
+    // const myMessege = input0804.value
     pf0804.style.height = "40px";
               input0804.style.height = "40px";
               send.style.display = "none";
@@ -69,16 +67,14 @@ m0801.addEventListener('click',()=>{
                   </div>
                   <div class="pop__info">
                     <p>
-                    Gecirim 50,00 manat bellenen belga ${myMessege} nobata goyulan
+                    Gecirim ${summa} manat bellenen belga ${nomer} nobata goyulan
                     </p>
                   </div>
                 </div>
                 <p class="time">${hour}:${min}</p>
               </div>`)
-             
-              
+                         
   }
-  
   const f1 =(event)=>{
     event.stopPropagation()
     create0801()
@@ -91,12 +87,34 @@ m0801.addEventListener('click',()=>{
   }
   
   send.addEventListener('click',f1)
- 
-  
+  input0804.addEventListener('keypress',createMessege)
+
+  let arr =[]
+  let nomer
+  let summa
+
+function createMessege(event){
+ arr.push(event.key) 
+ nomer =arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6]+arr[7]+arr[8]+arr[9]+arr[10]
+   summa = arr[12]+arr[13]
+}
+
+
+
+
+
+
+
+
+
+
 
 const time = new Date();
+
+const month = time.getMonth()+1
+
 const year = time.getFullYear();
-const month = time.getMonth()+1 < 10 ? "0"+ (time.getMonth()+1) : time.getMonth()+1
+// const month = time.getMonth()+1 < 10 ? "0"+ (time.getMonth()+1) : time.getMonth()+1
 const date = time.getDate() < 10 ? "0" + time.getDate() : time.getDate()
 const hour = time.getHours() < 10 ? "0" + time.getHours() : time.getHours()
 const min = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()
@@ -104,13 +122,6 @@ const sec = time.getSeconds() <10 ? "0"+ time.getSeconds() : time.getSeconds()
 
 
 console.log(year, month, date, hour, min, sec);
-
-
-
-console.log(month);
-
-
-
 
 const sound = () =>{
   const audio = new Audio()
