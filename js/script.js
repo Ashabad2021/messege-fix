@@ -72,9 +72,11 @@ m0801.addEventListener('click',()=>{
                 </div>
                 <p class="time">${hour}:${min}</p>
               </div>`)
-                         
+                    
   }
   const f1 =(event)=>{
+    console.log(summa);  
+    console.log(nomer);  
     event.stopPropagation()
     create0801()
     create0804()
