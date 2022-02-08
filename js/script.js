@@ -99,21 +99,12 @@ function createMessege(event){
 }
 
 
-
-
-
-
-
-
-
-
-
 const time = new Date();
 
 const month = time.getMonth()+1
 
 const year = time.getFullYear();
-// const month = time.getMonth()+1 < 10 ? "0"+ (time.getMonth()+1) : time.getMonth()+1
+
 const date = time.getDate() < 10 ? "0" + time.getDate() : time.getDate()
 const hour = time.getHours() < 10 ? "0" + time.getHours() : time.getHours()
 const min = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()
@@ -127,8 +118,3 @@ const sound = () =>{
   audio.src = "222.m4a"
   audio.play()
 }
-
-// const date = time.getDate();
-// const hour = time.getHours();
-// const min = time.getMinutes();
-// const sec = time.getSeconds();
